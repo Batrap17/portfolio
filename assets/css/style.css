@@ -1,0 +1,110 @@
+/* Fonts */
+
+@font-face {
+    font-family: 'Archivo Black', sans-serif;
+    src: url(..\fonts\archivo\ArchivoBlack-Regular.ttf);
+  }
+
+@font-face {
+font-family: "nunito";
+src: url(..\fonts\krona\Nunito-Regular.ttf);
+}
+
+/* General rules */
+
+body, html {
+    overflow: hidden;
+}
+
+h1 {
+    text-transform: uppercase;
+    font-family: 'Archivo Black', sans-serif;
+    font-weight: 900;
+}
+
+/*----- Home page -----*/
+
+.name {
+    position: absolute;
+    height: 100vh;
+    width: 100vw;
+    top: 0;
+}
+
+.name > div {
+    height: 50vh;
+    overflow: hidden; 
+    white-space: nowrap; 
+}
+
+.name__title {
+    background-image: url("../img/baptiste_photo.jpg");
+    background-clip: text;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    color: transparent;
+    -moz-color: transparent;
+    background-position: 0% 100%;
+    background-attachment: fixed;
+    -webkit-background-attachment: fixed;
+    -moz-background-attachment: fixed;
+    background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+}
+
+.name--lastname {
+    top: 25%;
+}
+
+.name__title {
+    text-transform: uppercase;
+    font-family: 'Archivo Black', sans-serif;
+    font-weight: 900;
+    font-size: 12vw;
+    display: flex;
+    justify-content: space-between;
+    width: 100vw;
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end; 
+    height: 25vh;
+}
+
+.name__background {
+    width: 100vw;
+    background-image: url("../img/baptiste_photo.jpg");
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: 0%  100%;
+}
+
+/*----- Media Queries -----*/
+
+@media screen and (orientation: portrait) {
+    .name__title {
+        writing-mode: vertical-lr;
+        text-orientation: upright;
+        justify-content: center;
+        align-items: center; 
+        height: 100vh;
+        width: 25vw !important;
+        font-size: 12vw;
+        letter-spacing: -4.5vw;
+    }
+
+    .name--lastname {
+        left: 25%;
+        top: 0;
+    }
+
+    .name__background {
+        width: 50vw;
+        height: 100vh !important;
+        background-position: 0% 100%;
+    }
+} 
